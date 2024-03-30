@@ -5,10 +5,11 @@ var Zufallsgedicht;
     let subjekt = ["Artemis", "Hades", "Zagreus", "Cerberus", "Persephone", "Poseidon"];
     let prädikat = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
     let objekt = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
+
     for (let i = subjekt.length; i >= 1; i--) 
     {
         let wort = getwort(subject, prädikat, objekt);
-        console.log(wort);
+        console.log(wort (subjekt, prädikat, objekt));
     }
     function getwort(_subjekt, _prädikat, _objekt) 
     {

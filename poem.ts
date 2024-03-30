@@ -4,12 +4,11 @@ namespace ZufallsGedicht {
     let prädikat = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
     let objekt = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
     
-    for (let i = subjekt.length; i >= 1; i--){
-        let wort = getwort(subjekt, prädikat, objekt);
-        console.log(wort);
+    for (let i = subjekt.length; i >= 1; i--)
+    {
+        let wort = console.log(getVerse(subjekt, prädikat, objekt));
     }
-    
-    function getwort(_subjekt: string[],_prädikat: string[],_objekt: string[]) 
+    function getVerse(_subjekt: string[],_prädikat: string[],_objekt: string[]) 
     {
         let wort: string ="";
         let thisSubjekt: number = Math.floor(Math.random() * _subjekt.length);
