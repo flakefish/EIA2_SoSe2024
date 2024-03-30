@@ -1,24 +1,19 @@
-"use strict";
-var Zufallsgedicht;
-(function (Zufallsgedicht) 
-{
-    let subjekt = ["Artemis", "Hades", "Zagreus", "Cerberus", "Persephone", "Poseidon"];
-    let prädikat = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
-    let objekt = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
 
-    for (let i = subjekt.length; i >= 1; i--) 
-    {
-        let wort = getwort(subject, prädikat, objekt);
-        console.log(wort (subjekt, prädikat, objekt));
+var zufallsgedicht;
+(function (zufallsgedicht) {
+    let subject = ["Artemis", "Hades", "Zagreus", "Cerberus", "Persephone", "Poseidon"];
+    let predicate = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
+    let object = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", "großen Elefanten", "Robben"];
+
+    for (let i = subject.length; i >= 1; i--) {
+        let verse = getverse(subject, predicate, object);
     }
-    function getwort(_subjekt, _prädikat, _objekt) 
-    {
-        let wort = "";
-        let randomNumber1 = Math.floor(Math.random() * _subjekt.length);
-        randomNumber2 = Math.floor(Math.random() * _prädikat.length);
-        randomNumber3 = Math.floor(Math.random() * _objekt.length);
-        wort = _subjekt.splice(randomNumber1, 1 )[0] + _prädikat.splice(randomNumber2, 1)[0] + _objekt.splice(randomNumber3, 1)[0];
-        return wort;
+    function getverse(_subject, _predicate, _object) {
+        let verse = "";
+        let randomNumber1 = Math.floor(Math.random() * _subject.length);
+        let randomNumber2 = Math.floor(Math.random() * _predicate.length);
+        let randomNumber3 = Math.floor(Math.random() * _object.length);
+        verse += subject[randomNumber1] + " " + predicate[randomNumber2] + " " + object[randomNumber3];
+        console.log(verse);
     }
-})(Zufallsgedicht || (Zufallsgedicht = {}));
-//# sourceMappingURL=script.js.map
+})(zufallsgedicht || (zufallsgedicht = {}));

@@ -1,20 +1,20 @@
-namespace ZufallsGedicht {
+    namespace zufallsgedicht {
 
-    let subjekt = ["Artemis", "Hades", "Zagreus", "Cerberus", "Persephone", "Poseidon"];
-    let prädikat = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
-    let objekt = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
+    let subject: string[] = ["Artemis", "Hades", "Zagreus", "Cerberus", "Persephone", "Poseidon"];
+    let predicate: string[] = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
+    let object: string[] = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
     
-    for (let i = subjekt.length; i >= 1; i--)
-    {
-        let wort = console.log(getVerse(subjekt, prädikat, objekt));
+    for (let i = subject.length; i >= 1; i--){
+        let wort = console.log(getVerse(subject, predicate, object));
     }
-    function getVerse(_subjekt: string[],_prädikat: string[],_objekt: string[]) 
-    {
-        let wort: string ="";
-        let thisSubjekt: number = Math.floor(Math.random() * _subjekt.length);
-        let thisPrädikat: number = Math.floor(Math.random() * _prädikat.length);
-        let thisObjekt: number = Math.floor(Math.random() * _objekt.length);
-        wort = _subjekt.splice(thisSubjekt, 1)[0] + _prädikat.splice(thisPrädikat, 1)[0] + _objekt.splice(thisObjekt, 1)[0];
-        return wort;
+
+    function getVerse(_subject: string[], _predicate: string [], _object: string[]){
+        let verse: string = "";
+        let randomNumber1: number = Math.floor(Math.random()*subject.length);
+        let randomNumber2: number = Math.floor(Math.random()*predicate.length);
+        let randomNumber3: number = Math.floor(Math.random()*object.length);
+        verse += subject[randomNumber1] + " " + predicate[randomNumber2] + " " + object[randomNumber3];
+        console.log(verse);
     }
+    
     }
