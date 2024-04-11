@@ -5,10 +5,7 @@ var zufallsgedicht;
     let predicate = ["jagt", "hasst", "kuschelt", "füttert", "spielt mit", "sucht nach"];
     let object = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", "großen Elefanten", "Robben"];
 
-    for (let i = subject.length; i >= 1; i--) {
-        let wort = getVerse(subject, predicate, object);
-        console.log(wort);
-    }
+
     
     function getVerse(_subject, _predicate, _object) {
         let verse = "";
@@ -18,4 +15,10 @@ var zufallsgedicht;
         verse += _subject.splice[randomNumber1] + " " + _predicate.splice[randomNumber2] + " " + _object.splice[randomNumber3];
         return verse;
     }
+
+    for (let i = subject.length; i >= 1; i--) {
+        let wort = getVerse(subject, predicate, object);
+        console.log(wort);
+    }
 })(zufallsgedicht || (zufallsgedicht = {}));
+//# sourceMappingURL=poem.js.map
