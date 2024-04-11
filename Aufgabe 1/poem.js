@@ -7,13 +7,15 @@ var zufallsgedicht;
 
     for (let i = subject.length; i >= 1; i--) {
         let verse = getverse(subject, predicate, object);
+        return verse;
     }
+    
     function getverse(_subject, _predicate, _object) {
         let verse = "";
         let randomNumber1 = Math.floor(Math.random() * _subject.length);
         let randomNumber2 = Math.floor(Math.random() * _predicate.length);
         let randomNumber3 = Math.floor(Math.random() * _object.length);
-        verse += subject[randomNumber1] + " " + predicate[randomNumber2] + " " + object[randomNumber3];
+        verse += subject.splice[randomNumber1] + " " + predicate.splice[randomNumber2] + " " + object.splice[randomNumber3];
         console.log(verse);
     }
 })(zufallsgedicht || (zufallsgedicht = {}));

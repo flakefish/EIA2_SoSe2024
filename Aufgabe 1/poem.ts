@@ -5,7 +5,8 @@
     let object: string[] = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", " große Elefanten", "Robben"];
     
     for (let i = subject.length; i >= 1; i--){
-        let wort = console.log(getVerse(subject, predicate, object));
+        let verse = console.log(getVerse(subject, predicate, object));
+        console.log(verse);
     }
 
     function getVerse(_subject: string[], _predicate: string [], _object: string[]){
@@ -13,8 +14,7 @@
         let randomNumber1: number = Math.floor(Math.random()*subject.length);
         let randomNumber2: number = Math.floor(Math.random()*predicate.length);
         let randomNumber3: number = Math.floor(Math.random()*object.length);
-        verse += subject[randomNumber1] + " " + predicate[randomNumber2] + " " + object[randomNumber3];
-        console.log(verse);
+        verse += subject.splice[randomNumber1] + " " + predicate.splice[randomNumber2] + " " + object.splice[randomNumber3];
     }
     
     }
