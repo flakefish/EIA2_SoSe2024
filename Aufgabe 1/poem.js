@@ -6,16 +6,16 @@ var zufallsgedicht;
     let object = ["zwei Wölfe", "Hunde", "Katzen", "Schneeleoparden", "großen Elefanten", "Robben"];
 
     for (let i = subject.length; i >= 1; i--) {
-        let verse = getverse(subject, predicate, object);
-        console.log(verse)
+        let wort = getVerse(subject, predicate, object);
+        console.log(wort);
     }
     
-    function getverse(_subject, _predicate, _object) {
+    function getVerse(_subject, _predicate, _object) {
         let verse = "";
         let randomNumber1 = Math.floor(Math.random() * _subject.length);
         let randomNumber2 = Math.floor(Math.random() * _predicate.length);
         let randomNumber3 = Math.floor(Math.random() * _object.length);
-        verse += subject.splice[randomNumber1] + " " + predicate.splice[randomNumber2] + " " + object.splice[randomNumber3];
+        verse += _subject.splice[randomNumber1] + " " + _predicate.splice[randomNumber2] + " " + _object.splice[randomNumber3];
         return verse;
     }
 })(zufallsgedicht || (zufallsgedicht = {}));
