@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+  margin: 0 45px;
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+#divGanz {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+#div0 {
+  background-color: rgb(184, 255, 224);
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#div1 {
+  background-color: rgb(119, 19, 107);
+  height: 500px;
+}
+
+button {
+  background-color: rgb(250, 255, 209);
+  border-radius: 10px;
+  padding: 6%;
+  font-size: 25px;
+  font-style: bold;
+}
+
+span {
+  font-size: 15px;
+  font-family: sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  border: thin solid black;
+  width: 150px;
+  height: 100px;
+}
