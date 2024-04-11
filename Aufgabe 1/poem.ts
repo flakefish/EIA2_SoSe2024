@@ -15,6 +15,7 @@
         let randomNumber2: number = Math.floor(Math.random()*predicate.length);
         let randomNumber3: number = Math.floor(Math.random()*object.length);
         verse += subject.splice[randomNumber1] + " " + predicate.splice[randomNumber2] + " " + object.splice[randomNumber3];
+        return verse;
     }
     
     }

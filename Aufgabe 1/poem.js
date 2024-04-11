@@ -7,7 +7,7 @@ var zufallsgedicht;
 
     for (let i = subject.length; i >= 1; i--) {
         let verse = getverse(subject, predicate, object);
-        return verse;
+        console.log(verse)
     }
     
     function getverse(_subject, _predicate, _object) {
@@ -16,6 +16,6 @@ var zufallsgedicht;
         let randomNumber2 = Math.floor(Math.random() * _predicate.length);
         let randomNumber3 = Math.floor(Math.random() * _object.length);
         verse += subject.splice[randomNumber1] + " " + predicate.splice[randomNumber2] + " " + object.splice[randomNumber3];
-        console.log(verse);
+        return verse;
     }
 })(zufallsgedicht || (zufallsgedicht = {}));
