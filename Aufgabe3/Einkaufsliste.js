@@ -8,6 +8,7 @@ var Shoppinglist;
         const commentsInput = document.getElementById("comments");
         const checkInput = document.getElementById("check");
         // Setze Inputs zu den eingetragenen Mengen
+        
         if (productInput) {
             productInput.addEventListener("input", () => {
                 console.log("Produkt wurde hinzugefügt");
