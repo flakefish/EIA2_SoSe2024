@@ -1,46 +1,36 @@
 "use strict";
-var Shoppinglist2;
-(function (ShoppingList) {
-    document.addEventListener("DOMContentLoaded", () => {
-        const productInput = document.getElementById("product");
-        const amountInput = document.getElementById("amount");
-        const dateInput = document.getElementById("date");
-        const commentsInput = document.getElementById("comments");
-        const checkInput = document.getElementById("check");
-        // Setze Inputs zu den eingetragenen Mengen
-        
-        if (productInput) {
-            productInput.addEventListener("input", () => {
-                console.log("Produkt wurde hinzugefügt");
+var ShoppingList2;
+(function (ShoppingList2) {
+    document.addEventListener("DOMContentLoaded", function () {
+        generateContent(data);
+        var newEntryButton = document.getElementById("newEntryButton");
+        if (newEntryButton) {
+            newEntryButton.addEventListener("click", function () {
+                addNewEntry();
             });
         }
-        if (amountInput) {
-            amountInput.addEventListener("change", () => {
-                console.log("Menge wurde verändert");
-            });
-        }
-        if (dateInput) {
-            dateInput.addEventListener("change", () => {
-                console.log("Datum wurde verändert");
-            });
-        }
-        if (commentsInput) {
-            commentsInput.addEventListener("input", () => {
-                console.log("Kommentar wurde hinzugefügt");
-            });
-        }
-        if (checkInput) {
-            checkInput.addEventListener("change", () => {
-                console.log("Dein Produkt wurde gekauft werden");
-        });
-    }
-       if (!checkInput) 
-       checkInput.addEventListener("change", () => {
-        console.log("Dein Produkt muss noch gekauft werden");
     });
-})
-    // Jegliche Konsolenausgaben, je nachdem ob etwas hinzugefügt wurde, wie bei bspw. productInput oder ob etwas gekauft/nicht gekauft
-    // wurde wie bei checkInput
-
+    function addNewEntry() {
+        var productInput = document.getElementById("product");
+        var amountInput = document.getElementById("amount");
+        var dateInput = document.getElementById("date");
+        var commentsInput = document.getElementById("comments");
+        var checkInput = document.getElementById("check");
+        var newItem = {
+            name: productInput.value,
+            amount: parseFloat(amountInput.value),
+            date: dateInput.value,
+            comment: commentsInput.value,
+            check: checkInput.checked
+        };
+        // Füge das neue Element der Liste hinzu
+        if (data.Product) {
+            data.Product.push(newItem);
+        }
+        else {
+            data.Product = [newItem];
+        }
+        // Aktualisiere die Anzeige
+        generateContent(data);
+    }
 })(ShoppingList2 || (ShoppingList2 = {}));
-//# sourceMappingURL=Einkaufsliste.js.map                 

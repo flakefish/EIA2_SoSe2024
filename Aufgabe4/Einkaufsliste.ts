@@ -1,42 +1,38 @@
-namespace ShoppingList2 {   
+namespace ShoppingList2 {
     document.addEventListener("DOMContentLoaded", () => {
-
         generateContent(data);
 
-        const productInput = document.getElementById("product");
-        const amountInput = document.getElementById("amount");
-        const dateInput = document.getElementById("date");
-        const commentsInput = document.getElementById("comments");
-        const checkInput = document.getElementById("check");
-    
-        if (productInput) {
-            productInput.addEventListener("input", () => {
-                console.log("Produkt wurde hinzugefügt");
-            });
-        }
-    
-        if (amountInput) {
-            amountInput.addEventListener("change", () => {
-                console.log("Menge wurde verändert");
-            });
-        }
-    
-        if (dateInput) {
-            dateInput.addEventListener("change", () => {
-                console.log("Datum wurde verändert");
-            });
-        }
-    
-        if (commentsInput) {
-            commentsInput.addEventListener("input", () => {
-                console.log("Kommentar wurde hinzugefügt");
-            });
-        }
-    
-        if (checkInput) {
-            checkInput.addEventListener("change", () => {
-                console.log("Dein Produkt soll gekauft werden");
+        const newEntryButton = document.getElementById("newEntryButton");
+        if (newEntryButton) {
+            newEntryButton.addEventListener("click", () => {
+                addNewEntry();
             });
         }
     });
+
+    function addNewEntry() {
+        const productInput = document.getElementById("product") as HTMLInputElement;
+        const amountInput = document.getElementById("amount") as HTMLInputElement;
+        const dateInput = document.getElementById("date") as HTMLInputElement;
+        const commentsInput = document.getElementById("comments") as HTMLInputElement;
+        const checkInput = document.getElementById("check") as HTMLInputElement;
+
+        const newItem: Item = {
+            name: productInput.value,
+            amount: parseFloat(amountInput.value),
+            date: dateInput.value,
+            comment: commentsInput.value,
+            check: checkInput.checked
+        };
+
+        // Füge das neue Element der Liste hinzu
+        if (data.Product) {
+            data.Product.push(newItem);
+        } else {
+            data.Product = [newItem];
+        }
+
+        // Aktualisiere die Anzeige
+        generateContent(data);
     }
+}
