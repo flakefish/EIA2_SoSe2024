@@ -1,7 +1,10 @@
 namespace ShoppingList2 {
-    interface Item {
+    export interface Item {
             name: string;
-            price: number;
+            amount: number;
+            date: string;
+            comment: string;
+            check: boolean;
     }
 
     export interface Data {
@@ -10,7 +13,7 @@ namespace ShoppingList2 {
 
     export let data: Data = {
         Product: [
-            {name: "Product", price: 0.50}
+            { name: "Product", amount: 1, date: "27.04.2024", comment:"Habe ich", check: true },
         ]
     }
 }

@@ -2,7 +2,7 @@ var ShoppingList2;
 (function (ShoppingList2) {
     ShoppingList2.data = {
         Product: [
-            { name: "Product", price: 0.50 }
+            { name: "Product", amount: 1, date: "27.01.2004", comment: "Habe ich", check: true }
         ]
     };
 })(ShoppingList2 || (ShoppingList2 = {}));
