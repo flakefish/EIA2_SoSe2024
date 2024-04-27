@@ -1,6 +1,6 @@
 "use strict";
 var Shoppinglist2;
-(function (Shoppinglist) {
+(function (ShoppingList) {
     document.addEventListener("DOMContentLoaded", () => {
         const productInput = document.getElementById("product");
         const amountInput = document.getElementById("amount");
@@ -42,5 +42,5 @@ var Shoppinglist2;
     // Jegliche Konsolenausgaben, je nachdem ob etwas hinzugefügt wurde, wie bei bspw. productInput oder ob etwas gekauft/nicht gekauft
     // wurde wie bei checkInput
 
-})(Shoppinglist || (Shoppinglist = {}));
+})(ShoppingList2 || (ShoppingList2 = {}));
 //# sourceMappingURL=Einkaufsliste.js.map                 

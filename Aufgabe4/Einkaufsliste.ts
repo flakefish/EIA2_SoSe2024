@@ -1,4 +1,4 @@
-namespace Shoppinglist2 {   
+namespace ShoppingList2 {   
     document.addEventListener("DOMContentLoaded", () => {
 
         generateContent(data);

@@ -1,4 +1,4 @@
-namespace Shoppinglist2 {
+namespace ShoppingList2 {
     interface Item {
             name: string;
             price: number;
