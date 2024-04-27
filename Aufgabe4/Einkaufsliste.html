@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste</title>
+    <link rel="stylesheet" href="Einkaufsliste.css">
+    <script src="Einkaufsliste.js"></script>
+</head>
+<body>
+
+    <h1>Einkaufsliste</h1>
+    <div id="bigDiv">
+      
+      <div class="Entry">
+        <div class="input">
+          <input type="text" placeholder="Produkt">
+          <input type="checkbox" name="Product" id="check" value="Product">
+          <p< class="purchaseText"> Gekauft? </p>
+        </div>
+    
+        <div class="input">
+          <input type="number" name="Menge" step="1" min="0" max="30" value="0" id="amount" />
+          <input type="text" placeholder="Kommentar" id="comments">
+          <td><input type="date" name="Date" id="date" /></td>
+          <button class="deleteButton">Löschen</button>
+        </div>
+      </div>
+ 
+      <p> </p> 
+
+      <button id="newEntryButton">Neues Objekt</button>
+    </div>
+  
+  </body>
+  
+  </html>
