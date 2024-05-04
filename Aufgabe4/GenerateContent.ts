@@ -1,14 +1,13 @@
 namespace ShoppingList2 {
     export function generateContent(_data: Data) {
-        const fieldset = document.querySelector("fieldset");
-
-        if (!fieldset) return;
+        const neuerDiv = document.getElementById("NeuerDIV");
+        if (!neuerDiv) return;
 
         for (let category in _data) {
             let items: Item[] = _data[category];
             let group = createSelect(items, category);
             if (group) {
-                fieldset.appendChild(group);
+                neuerDiv.appendChild(group);
             }
         }
     }

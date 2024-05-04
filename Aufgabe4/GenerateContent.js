@@ -1,14 +1,14 @@
 var ShoppingList2;
 (function (ShoppingList2) {
     function generateContent(_data) {
-        var fieldset = document.querySelector("fieldset");
-        if (!fieldset)
-            return;
+        var neuerDiv = document.getElementById("NeuerDIV");
+        if (!neuerDiv) return;
+
         for (var category in _data) {
             var items = _data[category];
             var group = createSelect(items, category);
             if (group) {
-                fieldset.appendChild(group);
+                neuerDiv.appendChild(group);
             }
         }
     }
